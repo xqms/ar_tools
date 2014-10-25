@@ -27,6 +27,14 @@ generate_messages(DEPENDENCIES
 	geometry_msgs
 )
 
+# This hack is only to allow the rosmsg tool to locate the messages genererated by the actions, so that the IRI scripts can
+# locate them when adding actions to a node.
+add_custom_target(ar_pose_copy_msgs ALL)
+add_custom_command(TARGET ar_pose_copy_msgs POST_BUILD
+COMMAND rsync -aq ${CATKIN_DEVEL_PREFIX}/share/${PROJECT_NAME}/ ${CMAKE_CURRENT_SOURCE_DIR}/msg/)
+add_dependencies(ar_pose_copy_msgs ar_pose_msgs_generate_messages_cpp)
+
+
 include_directories(${catkin_INCLUDE_DIRS} include)
 
 add_executable(ar_single
