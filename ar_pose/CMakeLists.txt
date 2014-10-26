@@ -4,7 +4,6 @@ cmake_minimum_required(VERSION 2.8)
 project(ar_pose)
 
 find_package(catkin REQUIRED
-	roscpp
 	visualization_msgs
 	artoolkit
 	geometry_msgs
@@ -25,6 +24,13 @@ add_message_files(
 
 generate_messages(DEPENDENCIES
 	geometry_msgs
+)
+
+catkin_package(
+#  INCLUDE_DIRS 
+#  LIBRARIES 
+ CATKIN_DEPENDS visualization_msgs artoolkit geometry_msgs tf resource_retriever image_transport cv_bridge message_runtime
+#  DEPENDS 
 )
 
 # This hack is only to allow the rosmsg tool to locate the messages genererated by the actions, so that the IRI scripts can
