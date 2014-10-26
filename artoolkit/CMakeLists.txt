@@ -9,7 +9,7 @@ find_package(catkin REQUIRED)
 add_custom_target(ARToolkit_catkin)
 
 catkin_package(
-	LIBRARIES GL glut ARgsub AR ARMulti ARvideo GL glut
+	LIBRARIES ARgsub AR ARMulti ARvideo GL glut
 	EXPORTED_TARGETS ARToolkit_catkin
 )
 
