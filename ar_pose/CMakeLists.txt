@@ -33,8 +33,8 @@ catkin_package(
 #  DEPENDS 
 )
 
-# This hack is only to allow the rosmsg tool to locate the messages genererated by the actions, so that the IRI scripts can
-# locate them when adding actions to a node.
+# This hack is only to allow the rosmsg tool to locate the messages genererated, so that external scripts can
+# locate them when adding messages to a node. The ROS community has no clean solution to this in the current version. 
 add_custom_target(ar_pose_copy_msgs ALL)
 add_custom_command(TARGET ar_pose_copy_msgs POST_BUILD
 COMMAND rsync -aq ${CATKIN_DEVEL_PREFIX}/share/${PROJECT_NAME}/ ${CMAKE_CURRENT_SOURCE_DIR}/msg/)
