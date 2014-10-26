@@ -4,9 +4,9 @@ cmake_minimum_required(VERSION 2.8)
 project(ar_pose)
 
 find_package(catkin REQUIRED
-	roscpp
-	visualization_msgs
+	ar_tools_msgs
 	artoolkit
+	visualization_msgs
 	geometry_msgs
 	tf
 	resource_retriever
@@ -15,16 +15,8 @@ find_package(catkin REQUIRED
 	message_generation
 )
 
-
-add_message_files(
-  DIRECTORY msg
-  FILES
-	ARMarker.msg
-	ARMarkers.msg
-)
-
-generate_messages(DEPENDENCIES
-	geometry_msgs
+catkin_package(
+ CATKIN_DEPENDS ar_tools_msgs visualization_msgs geometry_msgs tf resource_retriever image_transport cv_bridge message_runtime
 )
 
 include_directories(${catkin_INCLUDE_DIRS} include)

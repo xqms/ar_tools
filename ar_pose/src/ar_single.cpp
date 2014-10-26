@@ -105,7 +105,7 @@ namespace ar_pose
     
     // **** advertsie 
 
-    arMarkerPub_   = n_.advertise<ar_pose::ARMarker>("ar_pose_marker", 0);
+    arMarkerPub_   = n_.advertise<ar_tools_msgs::ARMarker>("ar_pose_marker", 0);
     if(publishVisualMarkers_){ 
 		rvizMarkerPub_ = n_.advertise<visualization_msgs::Marker>("visualization_marker", 0);
 	 }

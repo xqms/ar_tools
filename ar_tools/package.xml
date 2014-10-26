@@ -13,6 +13,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <run_depend>ar_tools_msgs</run_depend>
   <run_depend>artoolkit</run_depend>
   <run_depend>ar_pose</run_depend>
 

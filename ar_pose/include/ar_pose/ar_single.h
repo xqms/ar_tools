@@ -58,7 +58,7 @@
 #endif
 
 
-#include <ar_pose/ARMarker.h>
+#include <ar_tools_msgs/ARMarker.h>
 
 const std::string cameraImageTopic_ = "/camera/image_raw";
 const std::string cameraInfoTopic_  = "/camera/camera_info";
@@ -83,7 +83,7 @@ namespace ar_pose
     tf::TransformBroadcaster broadcaster_;
     ros::Publisher arMarkerPub_;
 
-    ar_pose::ARMarker ar_pose_marker_;
+    ar_tools_msgs::ARMarker ar_pose_marker_;
     image_transport::ImageTransport it_;
     image_transport::Subscriber cam_sub_;
 #if ! ROS_VERSION_MINIMUM(1, 9, 0)

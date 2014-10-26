@@ -78,7 +78,7 @@ namespace ar_pose
 
     // **** advertse 
 
-    arMarkerPub_ = n_.advertise < ar_pose::ARMarkers > ("ar_pose_marker", 0);
+    arMarkerPub_ = n_.advertise < ar_tools_msgs::ARMarkers > ("ar_pose_marker", 0);
     if(publishVisualMarkers_)
     {
       rvizMarkerPub_ = n_.advertise < visualization_msgs::Marker > ("visualization_marker", 0);
@@ -250,7 +250,7 @@ namespace ar_pose
 
       // **** publish the marker
 
-      ar_pose::ARMarker ar_pose_marker;
+      ar_tools_msgs::ARMarker ar_pose_marker;
       ar_pose_marker.header.frame_id = image_msg->header.frame_id;
       ar_pose_marker.header.stamp = image_msg->header.stamp;
       ar_pose_marker.id = object[i].id;

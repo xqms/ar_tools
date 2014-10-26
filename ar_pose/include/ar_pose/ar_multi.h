@@ -58,8 +58,8 @@
   #include <cv_bridge/CvBridge.h>
 #endif
 
-#include <ar_pose/ARMarkers.h>
-#include <ar_pose/ARMarker.h>
+#include <ar_tools_msgs/ARMarkers.h>
+#include <ar_tools_msgs/ARMarker.h>
 #include <ar_pose/object.h>
 
 const std::string cameraImageTopic_ = "/camera/image_raw";
@@ -103,7 +103,7 @@ namespace ar_pose
     int objectnum;
     char pattern_filename_[FILENAME_MAX];
 
-    ar_pose::ARMarkers arPoseMarkers_;
+    ar_tools_msgs::ARMarkers arPoseMarkers_;
     int threshold_;
     bool getCamInfo_;
     bool publishTf_;
