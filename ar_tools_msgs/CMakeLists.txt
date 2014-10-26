@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(iri_visual_servo_msgs)
+project(ar_tools_msgs)
 
 find_package(catkin REQUIRED)
 find_package(catkin REQUIRED COMPONENTS geometry_msgs message_generation)
